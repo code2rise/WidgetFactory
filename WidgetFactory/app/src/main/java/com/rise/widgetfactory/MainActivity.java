@@ -31,27 +31,29 @@ public class MainActivity extends ActionBarActivity {
 
 //                popupView.showMessageWithTitle("Test" , "Test message for popup", getCurrentFocus());
 
-                popupView.showAlert("Test", "Test message for popup", getCurrentFocus(), new View.OnClickListener() {
-                    @Override
-                    public void onClick(View view) {
+//                popupView.showAlert("Test", "Test message for popup", getCurrentFocus(), new View.OnClickListener() {
+//                    @Override
+//                    public void onClick(View view) {
+//
+//                        switch (view.getId()) {
+//                            case R.id.ok_btn: {
+//                                Toast.makeText(MainActivity.this, "Ok", Toast.LENGTH_SHORT).show();
+//                                popupView.dismiss();
+//                                break;
+//                            }
+//                            case R.id.cancel_btn: {
+//                                Toast.makeText(MainActivity.this, "Cancel", Toast.LENGTH_SHORT).show();
+//                                popupView.dismiss();
+//                                break;
+//                            }
+//                        }
+//
+//                        popupView.dismiss();
+//                        System.out.println("Clicked!!");
+//                    }
+//                });
 
-                        switch (view.getId()) {
-                            case R.id.ok_btn: {
-                                Toast.makeText(MainActivity.this, "Ok", Toast.LENGTH_SHORT).show();
-                                popupView.dismiss();
-                                break;
-                            }
-                            case R.id.cancel_btn: {
-                                Toast.makeText(MainActivity.this, "Cancel", Toast.LENGTH_SHORT).show();
-                                popupView.dismiss();
-                                break;
-                            }
-                        }
-
-                        popupView.dismiss();
-                        System.out.println("Clicked!!");
-                    }
-                });
+                CustomToast.showToast(MainActivity.this, "This is pretty long custom toast message!!");
             }
         });
     }
