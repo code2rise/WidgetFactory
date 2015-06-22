@@ -64,7 +64,7 @@ public class MainActivity extends ActionBarActivity {
             public void onClick(View view) {
 
                 Intent launchWebViewIntent = new Intent(MainActivity.this, WebViewActivity.class);
-                launchWebViewIntent.putExtra("url", "http://www.gmail.com");
+                launchWebViewIntent.putExtra("url", "http://www.youtube.com");
                 startActivity(launchWebViewIntent);
             }
         });
