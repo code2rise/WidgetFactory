@@ -5,4 +5,8 @@
     <string name="action_settings">Settings</string>
     <string name="txt_ok">OK</string>
     <string name="txt_cancel">Cancel</string>
+    <string name="title_activity_custom_web_view">Custom WebView</string>
+
+    <string name="connection_timed_out">Connection Timed Out.</string>
+    <string name="title_activity_web_view">WebViewActivity</string>
 </resources>

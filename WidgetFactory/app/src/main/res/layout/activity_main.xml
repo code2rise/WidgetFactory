@@ -19,4 +19,11 @@
         android:layout_height="wrap_content"
         android:text="Show Popup"/>
 
+    <Button
+        android:id="@+id/btnLaunchWebView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/test_popup_btn"
+        android:text="Load URL"/>
+
 </RelativeLayout>

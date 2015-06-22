@@ -1,17 +1,18 @@
 package com.rise.widgetfactory;
 
-import android.support.v7.app.ActionBarActivity;
+import android.content.Intent;
 import android.os.Bundle;
+import android.support.v7.app.ActionBarActivity;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
-import android.widget.Toast;
 
 
 public class MainActivity extends ActionBarActivity {
 
     PopupView popupView;
+    Button btnLoadUrl = null;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -54,6 +55,17 @@ public class MainActivity extends ActionBarActivity {
 //                });
 
                 CustomToast.showToast(MainActivity.this, "This is pretty long custom toast message!!");
+            }
+        });
+
+        btnLoadUrl = (Button) findViewById(R.id.btnLaunchWebView);
+        btnLoadUrl.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+                Intent launchWebViewIntent = new Intent(MainActivity.this, WebViewActivity.class);
+                launchWebViewIntent.putExtra("url", "http://www.gmail.com");
+                startActivity(launchWebViewIntent);
             }
         });
     }
