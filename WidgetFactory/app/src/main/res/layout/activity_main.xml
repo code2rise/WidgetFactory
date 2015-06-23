@@ -18,9 +18,10 @@
 
     <com.rise.widgetfactory.customviews.CustomButton
         android:id="@+id/test_popup_btn"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Show Popup"/>
+        android:layout_width="120dp"
+        android:layout_height="40dp"
+        android:text="Show Popup"
+        android:background="@drawable/rounded_corner_btn_background"/>
 
     <Button
         android:id="@+id/btnLaunchWebView"
@@ -33,6 +34,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@id/btnLaunchWebView"
-        android:hint="Dummy Text Hint!!"/>
+        android:layout_marginTop="5dp"
+        android:hint="Dummy Text Hint!!"
+        android:background="@drawable/rounded_corner_edittext_background"/>
 
 </RelativeLayout>
