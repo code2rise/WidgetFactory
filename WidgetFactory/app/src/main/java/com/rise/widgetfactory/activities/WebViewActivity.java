@@ -1,4 +1,4 @@
-package com.rise.widgetfactory;
+package com.rise.widgetfactory.activities;
 
 import android.app.ProgressDialog;
 import android.content.Intent;
@@ -14,6 +14,9 @@ import android.webkit.WebChromeClient;
 import android.webkit.WebSettings;
 import android.webkit.WebView;
 import android.webkit.WebViewClient;
+
+import com.rise.widgetfactory.R;
+import com.rise.widgetfactory.customviews.CustomWebView;
 
 
 public class WebViewActivity extends AppCompatActivity {

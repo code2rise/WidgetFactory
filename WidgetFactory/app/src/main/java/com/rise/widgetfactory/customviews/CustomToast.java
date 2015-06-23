@@ -1,4 +1,4 @@
-package com.rise.widgetfactory;
+package com.rise.widgetfactory.customviews;
 
 import android.content.Context;
 import android.graphics.Color;
@@ -6,6 +6,8 @@ import android.view.Gravity;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
+
+import com.rise.widgetfactory.R;
 
 /**
  * Created by rise on 21/6/15.

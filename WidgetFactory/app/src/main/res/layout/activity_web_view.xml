@@ -2,9 +2,9 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.rise.widgetfactory.WebViewActivity">
+    tools:context="com.rise.widgetfactory.activities.WebViewActivity">
 
-    <com.rise.widgetfactory.CustomWebView
+    <com.rise.widgetfactory.customviews.CustomWebView
         android:id="@+id/webView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content" />

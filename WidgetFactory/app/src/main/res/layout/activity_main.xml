@@ -8,12 +8,15 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context=".MainActivity">
 
-    <TextView
+    <com.rise.widgetfactory.customviews.CustomTextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/hello_world" />
+        android:layout_centerInParent="true"
+        android:text="SHOW POPUP"
+        android:textSize="20sp"
+        android:textStyle="bold"/>
 
-    <Button
+    <com.rise.widgetfactory.customviews.CustomButton
         android:id="@+id/test_popup_btn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -25,5 +28,11 @@
         android:layout_height="wrap_content"
         android:layout_toRightOf="@id/test_popup_btn"
         android:text="Load URL"/>
+
+    <com.rise.widgetfactory.customviews.CustomEditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/btnLaunchWebView"
+        android:hint="Dummy Text Hint!!"/>
 
 </RelativeLayout>

@@ -1,4 +1,4 @@
-package com.rise.widgetfactory;
+package com.rise.widgetfactory.customviews;
 
 
 import android.content.Context;
@@ -8,6 +8,8 @@ import android.os.Message;
 import android.util.AttributeSet;
 import android.webkit.WebView;
 import android.widget.Toast;
+
+import com.rise.widgetfactory.R;
 
 import java.io.BufferedInputStream;
 import java.io.IOException;
