@@ -9,6 +9,7 @@
     tools:context=".MainActivity">
 
     <com.rise.widgetfactory.customviews.CustomTextView
+        android:id="@+id/tvShowMessage"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_centerInParent="true"
@@ -37,5 +38,14 @@
         android:layout_marginTop="5dp"
         android:hint="Dummy Text Hint!!"
         android:background="@drawable/rounded_corner_edittext_background"/>
+
+    <com.rise.widgetfactory.customviews.CustomButton
+        android:id="@+id/btnShowDropdown"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tvShowMessage"
+        android:layout_margin="5dp"
+        android:text="Show Dropdown"
+        android:textSize="22sp"/>
 
 </RelativeLayout>

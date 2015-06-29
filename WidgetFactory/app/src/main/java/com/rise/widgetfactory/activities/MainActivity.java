@@ -1,6 +1,7 @@
 package com.rise.widgetfactory.activities;
 
 import android.content.Intent;
+import android.graphics.Color;
 import android.os.Bundle;
 import android.support.v7.app.ActionBarActivity;
 import android.view.Menu;
@@ -8,15 +9,20 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 
-import com.rise.widgetfactory.customviews.PopupView;
 import com.rise.widgetfactory.R;
 import com.rise.widgetfactory.customviews.CustomToast;
+import com.rise.widgetfactory.customviews.PopupView;
+
+import org.json.JSONArray;
+import org.json.JSONException;
+import org.json.JSONObject;
 
 
 public class MainActivity extends ActionBarActivity {
 
     PopupView popupView;
     Button btnLoadUrl = null;
+    Button btnShowDropdown = null;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -70,6 +76,32 @@ public class MainActivity extends ActionBarActivity {
                 Intent launchWebViewIntent = new Intent(MainActivity.this, WebViewActivity.class);
                 launchWebViewIntent.putExtra("url", "http://www.youtube.com");
                 startActivity(launchWebViewIntent);
+            }
+        });
+
+        btnShowDropdown = (Button) findViewById(R.id.btnShowDropdown);
+        btnShowDropdown.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+//                Toast.makeText(MainActivity.this, "Dropdown displayed!!",
+//                        Toast.LENGTH_SHORT).show();
+
+                JSONArray itemsJsonArray = new JSONArray();
+                String[] items = getResources().getStringArray(R.array.drawer_items);
+                for(int index=0; index<items.length; index++) {
+
+                    JSONObject itemJson = new JSONObject();
+                    try {
+                        itemJson.put("name", items[index]);
+                        itemsJsonArray.put(itemJson);
+                    } catch (JSONException e) {
+                        e.printStackTrace();
+                    }
+                }
+
+                popupView = new PopupView(MainActivity.this);
+                popupView.setBackgroundColor(Color.WHITE);
+                popupView.showDropdown(btnShowDropdown, itemsJsonArray);
             }
         });
     }
