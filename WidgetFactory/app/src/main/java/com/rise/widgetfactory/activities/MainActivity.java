@@ -7,7 +7,9 @@ import android.support.v7.app.ActionBarActivity;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.AdapterView;
 import android.widget.Button;
+import android.widget.Toast;
 
 import com.rise.widgetfactory.R;
 import com.rise.widgetfactory.customviews.CustomToast;
@@ -18,11 +20,12 @@ import org.json.JSONException;
 import org.json.JSONObject;
 
 
-public class MainActivity extends ActionBarActivity {
+public class MainActivity extends ActionBarActivity implements AdapterView.OnItemClickListener {
 
     PopupView popupView;
     Button btnLoadUrl = null;
     Button btnShowDropdown = null;
+    JSONArray itemsJsonArray = new JSONArray();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -86,7 +89,6 @@ public class MainActivity extends ActionBarActivity {
 //                Toast.makeText(MainActivity.this, "Dropdown displayed!!",
 //                        Toast.LENGTH_SHORT).show();
 
-                JSONArray itemsJsonArray = new JSONArray();
                 String[] items = getResources().getStringArray(R.array.drawer_items);
                 for(int index=0; index<items.length; index++) {
 
@@ -101,7 +103,7 @@ public class MainActivity extends ActionBarActivity {
 
                 popupView = new PopupView(MainActivity.this);
                 popupView.setBackgroundColor(Color.WHITE);
-                popupView.showDropdown(btnShowDropdown, itemsJsonArray);
+                popupView.showDropdown(btnShowDropdown, itemsJsonArray, MainActivity.this);
             }
         });
     }
@@ -126,5 +128,16 @@ public class MainActivity extends ActionBarActivity {
         }
 
         return super.onOptionsItemSelected(item);
+    }
+
+    @Override
+    public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
+
+        try {
+            Toast.makeText(this, itemsJsonArray.getString(i), Toast.LENGTH_SHORT).show();
+            popupView.dismiss();
+        } catch (JSONException e) {
+            e.printStackTrace();
+        }
     }
 }
