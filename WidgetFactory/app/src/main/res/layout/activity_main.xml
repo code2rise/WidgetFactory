@@ -8,14 +8,21 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context=".MainActivity">
 
-    <com.rise.widgetfactory.customviews.CustomTextView
+    <!--<com.rise.widgetfactory.customviews.CustomTextView
         android:id="@+id/tvShowMessage"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_centerInParent="true"
         android:text="SHOW POPUP"
         android:textSize="20sp"
-        android:textStyle="bold"/>
+        android:textStyle="bold"/>-->
+
+    <ImageView
+        android:id="@+id/imgCircular"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:src="@drawable/placeholder"/>
 
     <com.rise.widgetfactory.customviews.CustomButton
         android:id="@+id/test_popup_btn"
@@ -43,7 +50,7 @@
         android:id="@+id/btnShowDropdown"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@id/tvShowMessage"
+        android:layout_below="@id/imgCircular"
         android:layout_margin="5dp"
         android:text="Show Dropdown"
         android:textSize="22sp"/>

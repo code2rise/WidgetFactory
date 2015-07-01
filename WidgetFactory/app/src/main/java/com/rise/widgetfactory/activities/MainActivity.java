@@ -1,6 +1,8 @@
 package com.rise.widgetfactory.activities;
 
 import android.content.Intent;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.support.v7.app.ActionBarActivity;
@@ -9,9 +11,11 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.Toast;
 
 import com.rise.widgetfactory.R;
+import com.rise.widgetfactory.customviews.CircularImageView;
 import com.rise.widgetfactory.customviews.CustomToast;
 import com.rise.widgetfactory.customviews.PopupView;
 
@@ -26,6 +30,7 @@ public class MainActivity extends ActionBarActivity implements AdapterView.OnIte
     Button btnLoadUrl = null;
     Button btnShowDropdown = null;
     JSONArray itemsJsonArray = new JSONArray();
+    ImageView imgCircular = null;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -106,6 +111,13 @@ public class MainActivity extends ActionBarActivity implements AdapterView.OnIte
                 popupView.showDropdown(btnShowDropdown, itemsJsonArray, MainActivity.this);
             }
         });
+
+        imgCircular = (ImageView) findViewById(R.id.imgCircular);
+        Bitmap bitmap = BitmapFactory.decodeResource(getResources(), R.drawable.placeholder);
+
+        CircularImageView mCircularImageView = new CircularImageView();
+        Bitmap circularBitmap = mCircularImageView.getRoundedShape(bitmap);
+        imgCircular.setImageBitmap(circularBitmap);
     }
 
     @Override
