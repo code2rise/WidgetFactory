@@ -30,4 +30,7 @@
 
 <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="title_activity_simple_list_view">SimpleListViewActivity</string>
+
+    <string name="empty_list_view_message">Sorry, No Data To Display!!</string>
 </resources>
