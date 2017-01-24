@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "697613646357",
+    "project_id": "rise-above-failure"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:697613646357:android:ff7025b01213ea35",
+        "android_client_info": {
+          "package_name": "com.rise.googleplussignin"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "697613646357-sorqt105cp7sggcud0o2lbruj0lk41hr.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.rise.googleplussignin",
+            "certificate_hash": "1C5A3F0267E44505E157D32E37D9DFF5BE107759"
+          }
+        },
+        {
+          "client_id": "697613646357-7fuldnh7gl3lf3s5ash59c7li7s0vmka.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBG2QL_L-XzPbFL-aJW61KDVbiitEiZ3gU"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 1
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
