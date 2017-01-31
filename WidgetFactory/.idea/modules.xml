@@ -5,6 +5,7 @@
       <module fileurl="file://$PROJECT_DIR$/GooglePlusSignIn/GooglePlusSignIn.iml" filepath="$PROJECT_DIR$/GooglePlusSignIn/GooglePlusSignIn.iml" />
       <module fileurl="file://$PROJECT_DIR$/WidgetFactory.iml" filepath="$PROJECT_DIR$/WidgetFactory.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/youtubeapi/youtubeapi.iml" filepath="$PROJECT_DIR$/youtubeapi/youtubeapi.iml" />
     </modules>
   </component>
 </project>

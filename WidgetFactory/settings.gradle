@@ -1,1 +1,1 @@
-include ':app', ':GooglePlusSignIn'
+include ':app', ':GooglePlusSignIn', ':youtubeapi'
