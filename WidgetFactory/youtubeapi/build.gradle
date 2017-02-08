@@ -1,4 +1,6 @@
 apply plugin: 'com.android.application'
+apply plugin: 'com.google.gms.google-services'
+
 repositories {
     mavenCentral()
 }
@@ -28,16 +30,45 @@ android {
     configurations.all {
         resolutionStrategy.force 'com.google.code.findbugs:jsr305:2.0.1'
     }
+
+    packagingOptions {
+        exclude 'META-INF/NOTICE'
+        exclude 'META-INF/ASL2.0'
+        exclude 'META-INF/DEPENDENCIES.txt'
+        exclude 'META-INF/LICENSE.txt'
+        exclude 'META-INF/NOTICE.txt'
+        exclude 'META-INF/LICENSE'
+        exclude 'META-INF/DEPENDENCIES'
+        exclude 'META-INF/notice.txt'
+        exclude 'META-INF/license.txt'
+        exclude 'META-INF/dependencies.txt'
+        exclude 'META-INF/LGPL2.1'
+        exclude 'VERSION.txt'
+        exclude 'VERSION'
+        pickFirst 'com/fasterxml/jackson/core/json/VERSION.txt'
+    }
 }
 
 dependencies {
-    compile fileTree(dir: 'libs', include: ['*.jar'])
+    compile fileTree(include: ['*.jar'], dir: 'libs')
     androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
         exclude group: 'com.android.support', module: 'support-annotations'
     })
     compile 'com.android.support:appcompat-v7:25.1.0'
-    compile 'com.android.support:recyclerview-v7:25.1.0'
     compile 'com.android.support.constraint:constraint-layout:1.0.0-beta4'
-    compile files('libs/YouTubeAndroidPlayerApi.jar')
+    compile 'com.google.android.gms:play-services-auth:9.0.0'
+    compile 'com.fasterxml.jackson.core:jackson-core:2.1.3'
+    compile 'org.apache.httpcomponents:httpclient:4.0.1'
+    compile 'com.google.http-client:google-http-client-jackson2:1.11.0-beta'
+    compile 'com.google.http-client:google-http-client:1.22.0'
+    compile 'com.google.http-client:google-http-client-android:1.20.0'
+    compile 'com.google.http-client:google-http-client-gson:1.20.0' exclude module: 'httpclient'
+    compile 'com.google.code.findbugs:jsr305:1.3.9'
+    compile 'com.google.apis:google-api-services-youtube:v3-rev181-1.22.0'
+    compile 'com.google.oauth-client:google-oauth-client-java6:1.22.0'
+    compile 'com.google.oauth-client:google-oauth-client-jetty:1.22.0'
+    compile 'org.apache.httpcomponents:httpcore:4.0.1'
+    compile 'com.google.protobuf:protobuf-java:2.6.1'
+    compile 'com.google.api-client:google-api-client:1.22.0'
     testCompile 'junit:junit:4.12'
 }
